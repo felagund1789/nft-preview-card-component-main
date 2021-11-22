@@ -52,5 +52,3 @@ I also made a new `icon-view.png` image for the active state of the image, becau
 ## Author
 
 - Frontend Mentor - [@felagund1789](https://www.frontendmentor.io/profile/felagund1789)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**

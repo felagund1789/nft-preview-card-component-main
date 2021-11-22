@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
     :root {
       --color-soft-blue: hsl(215, 51%, 70%);
       --color-cyan: hsl(178, 100%, 50%);
@@ -19,13 +22,23 @@
       --color-line: hsl(215, 32%, 27%);
       --color-white: hsl(0, 0%, 100%);
     }
+
     body {
       background-color: var(--color-main-bg);
       font-size: 18px;
       font-family: 'Outfit', sans-serif;
       color: var(--color-soft-blue);
     }
-    h3 { margin-top: 0px; }
+
+    h3 {
+      margin-top: 0px;
+    }
+    main {
+      display: flex;
+      height: 94vh;
+      justify-content: center;
+      align-items: center;
+    }
 
     .card {
       margin-top: 25px;
@@ -36,15 +49,21 @@
       max-width: 300px;
       border-radius: 8px;
     }
-    .shadow { box-shadow: 0 20px 80px black;}
+
+    .shadow {
+      box-shadow: 0 20px 80px black;
+    }
+
     .title {
       color: var(--color-white);
       font-weight: bold;
     }
+
     .title:hover {
       color: var(--color-cyan);
       cursor: pointer;
     }
+
     .nft-image {
       width: 300px;
       height: 300px;
@@ -53,6 +72,7 @@
       background-image: url(images/image-equilibrium.jpg);
       background-size: 300px;
     }
+
     .nft-image:hover {
       cursor: pointer;
       background-size: 300px;
@@ -60,15 +80,35 @@
       background-image: url(images/image-equilibrium.jpg);
       background-blend-mode: overlay;
     }
+
     .viewable:hover {
       content: url(images/icon-view.png);
     }
 
-    .cost { display: block; float: left; color: var(--color-cyan); font-size: 16px; line-height: 16px; }
-    .cost::before { content: url(images/icon-ethereum.svg); margin-right: 0.5em; }
+    .cost {
+      display: block;
+      float: left;
+      color: var(--color-cyan);
+      font-size: 16px;
+      line-height: 16px;
+    }
 
-    .time-left { display: block; float: right; font-size: 16px; line-height: 16px; }
-    .time-left::before { content: url(images/icon-clock.svg); margin-right: 0.5em; }
+    .cost::before {
+      content: url(images/icon-ethereum.svg);
+      margin-right: 0.5em;
+    }
+
+    .time-left {
+      display: block;
+      float: right;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    .time-left::before {
+      content: url(images/icon-clock.svg);
+      margin-right: 0.5em;
+    }
 
     .line {
       height: 1px;
@@ -85,6 +125,7 @@
       font-size: 16px;
       vertical-align: text-top;
     }
+
     .created-by::before {
       content: "";
       display: inline-block;
@@ -96,40 +137,56 @@
       border: solid 1px transparent;
       border-radius: 18px;
     }
+
     .created-by:hover::before {
       border-color: var(--color-white);
     }
+
     .creator {
       color: var(--color-white);
       margin-left: 0.25em;
     }
+
     .creator:hover {
       color: var(--color-cyan);
       cursor: pointer;
     }
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      height: 4vh;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  <div class="card shadow extra-shadow">
+  <main>
+    <div class="card shadow">
 
-    <div class="nft-image viewable"></div>
-    <h3 class="title">Equilibrium #3429</h3>
+      <div class="nft-image viewable"></div>
+      <h3 class="title">Equilibrium #3429</h3>
 
-    <p>Our Equilibrium collection promotes balance and calm.</p>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
 
-    <div class="cost"> 0.041 ETH </div>
-    <div class="time-left"> 3 days left </div>
+      <div class="cost"> 0.041 ETH </div>
+      <div class="time-left"> 3 days left </div>
 
-    <div class="line"></div>
+      <div class="line"></div>
 
-    <p class="created-by">Creation of <span class="creator">Jules Wyvern</span></p>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/felagund1789/nft-preview-card-component-main/">Konstantinos K</a>.
-  </div>
+      <p class="created-by">Creation of <span class="creator">Jules Wyvern</span></p>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/felagund1789/nft-preview-card-component-main/">Konstantinos K</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
